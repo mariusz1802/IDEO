@@ -16,9 +16,13 @@
   "dependencies": {
     "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.14.0",
+    "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-styled-components": "^6.14.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^6.1.13"
+  },
+  "devDependencies": {
+    "gatsby-plugin-root-import": "^1.0.0"
   }
 }
