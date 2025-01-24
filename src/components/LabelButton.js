@@ -1,29 +1,49 @@
 import React from "react";
-import Styled, { styled } from "styled-components";
+import styled from "styled-components";
 
-
-
-function LabelButton({ icon, text, link }) {
+function LabelButton({ icon, text, link, altText }) {
   return (
-      <Container>
-        <img src={{ icon }} alt="ikona" />
-        <A href={link}>{text}</A>
-      </Container>
-
+    <Container>
+      <A href={link}>
+        <IconStyler>{icon}</IconStyler>
+        {text}
+      </A>
+    </Container>
   );
 }
 
 const Container = styled.div`
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 10px;
+  align-self: center;
+  padding: 0 10px;
+  height: 100%;
+  white-space: nowrap;
+`;
+
+const IconStyler = styled.div`
+  display: flex;
+  margin-right: 5px;
+  font-size: 1.5rem;
+  color: ${({ theme }) => theme.colors.darkBlue};
+  &:hover {
+    color: ${({ theme }) => theme.colors.brightBlue};
+  }
 `;
 
 const A = styled.a`
-  font-size: 20px;
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    ${IconStyler} {
+      color: ${({ theme }) => theme.colors.brightBlue};
+    }
+  }
 `;
 
 export default LabelButton;
