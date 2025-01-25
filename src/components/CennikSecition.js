@@ -45,7 +45,7 @@ function CennikSecition() {
 
 export default CennikSecition;
 
-const ButtonImage = styled.a`
+export const ButtonImage = styled.a`
   margin-top: 20px;
   border-radius: 20px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
@@ -60,17 +60,7 @@ const ButtonImage = styled.a`
     box-shadow: 10px 10px 15px rgba(0, 109, 196, 0.4);
   }
 
-  &:hover::before {
-    content: "";
-    position: absolute;
-    top: -150%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.5);
-    transform: rotate(45deg);
-    animation: shine 0.5s ease-in-out;
-  }
+
 
   &:hover img {
     filter: brightness(1.2); /* Rozjaśnienie obrazu */
@@ -84,16 +74,7 @@ const ButtonImage = styled.a`
     transition: filter 0.3s ease;
   }
 
-  @keyframes shine {
-    0% {
-      top: -150%;
-      left: -50%;
-    }
-    100% {
-      top: 150%;
-      left: 150%;
-    }
-  }
+ 
 `;
 
 const Column = styled.div`
