@@ -70,15 +70,14 @@ function Footer() {
 }
 
 const CardContainer = styled.div`
-  position: absolute; /* Wyjmij z normalnego przepływu */
-  padding: 30px 100px;
-  margin:20px;
-  bottom: 0;
+  margin: 40px;
+  padding: 50px 100px;
   font-size: clamp(1rem, 1.7vw, 3rem);
-  box-shadow: 10px 10px 10px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1000; /* Zapewnij, że będzie nad innymi elementami */
-  background-color: white; /* Dodaj tło, aby wyróżnić treść */
+  box-shadow: 10px 0px 8px rgba(0, 0, 0, 0.1);
+
   width: 32%;
+  margin-right: -120px;
+  z-index: 1000;
 `;
 
 const TextContainer = styled.p`
@@ -90,9 +89,7 @@ const TextContainer = styled.p`
 export default Footer;
 
 const FooterContainer = styled.div`
-  position: relative; /* Ważne dla pozycji absolutnej dzieci */
   display: flex;
-  flex-direction: column; /* Ustaw kolumnę dla układu pionowego */
   width: 100%;
 `;
 
@@ -156,9 +153,8 @@ const BlueContainer = styled.div`
   padding: 20px;
   padding-left: 100px;
   width: 70%;
-  position:relative;
-  z-index: 0;
   background: linear-gradient(-30deg, #043694, #0072b6);
+  position: relative; /* Aby pseudoelementy działały */
 
   /* Pseudoelementy tworzące podwójny obrys */
   &::before,

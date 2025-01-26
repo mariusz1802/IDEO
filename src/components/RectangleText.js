@@ -12,7 +12,7 @@ function RectangleText({text}) {
 
 export default RectangleText;
 
-const TextContainer = styled.div`
+export const TextContainer = styled.div`
   padding: 30px 50px;
   font-size: clamp(1rem, 1.7vw, 3rem);
   margin-left: 4vw;

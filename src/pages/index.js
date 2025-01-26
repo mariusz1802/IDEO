@@ -3,7 +3,6 @@ import Navbar from "../components/Navbar";
 import GlobalStyles from "../styles/GlobalSyles";
 import theme from "../styles/theme";
 import { ThemeProvider } from "styled-components";
-import BurgerMenu from "../components/BurgerMenu";
 import Hero from "../components/Hero";
 import OFirmieSection from "../components/OFirmieSection";
 import OfertaSection from "../components/OfertaSection";
