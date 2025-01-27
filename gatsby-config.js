@@ -23,25 +23,6 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-google-fonts-v2`,
-      options: {
-        fonts: [
-          {
-            family: "Raleway",
-            weights: ["100", "200", "300", "400", "500", "700", "600", "900"],
-          },
-          {
-            family: "Agbalumo",
-            weights: ["500"],
-          },
-          {
-            family: "Monsterrat",
-            weights: ["100", "200", "300", "400", "500", "700", "600", "900"],
-          },
-        ],
-      },
-    },
 
     {
       resolve: `gatsby-plugin-sharp`,
