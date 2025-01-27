@@ -7,7 +7,7 @@ import TextContent from "./TextContent.js";
 
 function StrefaKlienta() {
   return (
-    <HV>
+    <HV id="strefaKlienta">
       <SectionTitleWrapper>
         <TitlePosition>
           <SectionTitle

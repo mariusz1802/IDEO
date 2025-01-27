@@ -7,7 +7,7 @@ import TextContent from "./TextContent.js";
 
 function CennikSecition() {
   return (
-    <HV>
+    <HV id="cennik">
       <SectionTitleWrapper>
         <TitlePosition>
           <SectionTitle

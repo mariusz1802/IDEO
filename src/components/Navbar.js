@@ -28,6 +28,7 @@ function Navbar() {
               text={item.title}
               link={item.link}
               altText={item.title}
+              target={item.target}
             />
           ))}
         </PairLabels>
@@ -51,7 +52,7 @@ export default Navbar;
 
 const Container = Styled.div`
     background: linear-gradient(#0072B6, #043694);
-    height: 124px;
+    height: 100px;
     width: 100%;
     min-width: 600px;
     display: flex; 

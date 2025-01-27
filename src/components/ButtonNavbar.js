@@ -2,12 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { AnchorLink } from "gatsby-plugin-anchor-links";
 
-const Container = styled(AnchorLink)`
+const ButtonAnchor = styled(AnchorLink)`
   background: linear-gradient(#0072b6, #043694);
-  height: 124px;
-  min-width: 180px;
-  font-size: 20px;
-  padding: 45px;
+  height: 100px;
+  font-size: 17px;
+  padding: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,8 +28,8 @@ const Container = styled(AnchorLink)`
   }
 `;
 
-function ButtonNavbar({ title }) {
-  return <Container>{title}</Container>;
+function ButtonNavbar({ title, to }) {
+  return <ButtonAnchor to={to}>{title}</ButtonAnchor>;
 }
 
 export default ButtonNavbar;

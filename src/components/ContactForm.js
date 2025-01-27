@@ -18,8 +18,8 @@ const Input = styled.input`
   border-radius: 0;
   outline: none;
   font-size: 16px;
+  background: none;
   transition: border-color 0.3s ease;
-
   &:focus {
     border-bottom-color: #011882;
   }
@@ -29,16 +29,17 @@ const TextArea = styled.textarea`
   width: 100%;
   padding: 10px;
   border: none;
-  border-bottom: 4px solid #9b9b9b;
-  border-radius: 0;
+  border: 4px solid #9b9b9b;
+  border-radius: 10px;
   outline: none;
   font-size: 16px;
   resize: none;
   height: 120px;
   transition: border-color 0.3s ease;
+  background: none;
 
   &:focus {
-    border-bottom-color: #011882;
+    border-color: #011882;
   }
 `;
 
@@ -48,8 +49,8 @@ const SubmitButton = styled.button`
   background-color: #011882;
   color: #fff;
   border: none;
-  border-radius: 5px;
-  font-size: 18px;
+  border-radius: 15px;
+  font-size: 24px;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;

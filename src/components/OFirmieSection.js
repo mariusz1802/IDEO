@@ -30,9 +30,8 @@ export class OFirmieSection extends Component {
 export default OFirmieSection;
 
 const HV = styled.div`
-  padding: 10vh 0 10vh 30px;
+  padding: 5vh 0 5vh 30px;
   margin: 0 0 0 auto;
-  height: 100vh;
   width: 100%;
 `;
 

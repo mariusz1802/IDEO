@@ -7,32 +7,31 @@ import TextContent from "./TextContent.js";
 
 function OfertaSection() {
   return (
-    
-      <HV>
-        <SectionTitleWrapper>
-          <SectionTitle
-            firstWord={oferta.titleFirstWord}
-            underTitle={oferta.underTitle}
-            color="white"
-            underTitleColor="white"
-          />
-          <TextContent textContent={oferta.textContent} color="white" />
-        </SectionTitleWrapper>
-        <ContentContainer>
-          <StaticImage src="../assets/calc.png" alt="Kalkulator" />
-          <RectangleTextContainer>
-            <TextContainer>
-              <ul>
-                <li>Książka przychodów i rozchodów</li>
-                <li>Ryczałt od przychodów ewidencjonowanych</li>
-                <li>Kadry i płace</li>
-                <li>Pomoc przy zakładaniu działalności gospodarczej</li>
-                <li>Pomoc przy pozyskaniu środków z Urzędu Pracy</li>
-              </ul>
-            </TextContainer>
-          </RectangleTextContainer>
-        </ContentContainer>
-      </HV>
+    <HV id="oferta">
+      <SectionTitleWrapper>
+        <SectionTitle
+          firstWord={oferta.titleFirstWord}
+          underTitle={oferta.underTitle}
+          color="white"
+          underTitleColor="white"
+        />
+        <TextContent textContent={oferta.textContent} color="white" />
+      </SectionTitleWrapper>
+      <ContentContainer>
+        <StaticImage src="../assets/calc.png" alt="Kalkulator" />
+        <RectangleTextContainer>
+          <TextContainer>
+            <ul>
+              <li>Książka przychodów i rozchodów</li>
+              <li>Ryczałt od przychodów ewidencjonowanych</li>
+              <li>Kadry i płace</li>
+              <li>Pomoc przy zakładaniu działalności gospodarczej</li>
+              <li>Pomoc przy pozyskaniu środków z Urzędu Pracy</li>
+            </ul>
+          </TextContainer>
+        </RectangleTextContainer>
+      </ContentContainer>
+    </HV>
   );
 }
 

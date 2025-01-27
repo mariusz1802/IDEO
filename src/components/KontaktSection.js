@@ -13,7 +13,7 @@ import ContactForm from "./ContactForm.js";
 
 function KontaktSection() {
   return (
-    <HV>
+    <HV id="kontakt">
       <SectionTitleWrapper>
         <TitlePosition>
           <SectionTitle
@@ -48,7 +48,7 @@ function KontaktSection() {
             <StaticImage src="../assets/mapa.jpg" alt="Mapa" />
           </Column>
           <Column>
-          <ContactForm/>
+            <ContactForm />
           </Column>
         </ColumnWrapper>
       </IconContext.Provider>
@@ -68,7 +68,7 @@ const ColumnWrapper = styled.div`
   display: flex;
   margin-top: 3vh;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   margin: auto;
   width: 80%;
 `;
@@ -77,7 +77,7 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 50%;
+  width: 45%;
   justify-content: space-around;
 `;
 

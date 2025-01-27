@@ -7,7 +7,7 @@ import TextContent from "./TextContent.js";
 
 function KalkulatoryWyszSection() {
   return (
-    <HV>
+    <HV id="kalkulatory">
       <SectionTitleWrapper>
         <TitlePosition>
           <SectionTitle
