@@ -14,6 +14,7 @@ function CennikSecition() {
             firstWord={cennikUslug.titleFirstWord}
             secondWord={cennikUslug.titleSecondWord}
             underTitle={cennikUslug.underTitle}
+            textAlign="center"
           />
         </TitlePosition>
         <TextContent textContent={cennikUslug.textContent} />
@@ -49,9 +50,11 @@ export const ButtonImage = styled.a`
   margin-top: 20px;
   border-radius: 20px;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Ukryj cokolwiek, co wychodzi poza przycisk */
+  overflow: hidden; //Ukryj cokolwiek, co wychodzi poza przycisk
   position: relative;
+  display: inline-block;
   transform: scale(1);
+  width: 440px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
@@ -59,8 +62,6 @@ export const ButtonImage = styled.a`
     transform: scale(1.01); /* Powiększenie przycisku */
     box-shadow: 10px 10px 15px rgba(0, 109, 196, 0.4);
   }
-
-
 
   &:hover img {
     filter: brightness(1.2); /* Rozjaśnienie obrazu */
@@ -73,8 +74,7 @@ export const ButtonImage = styled.a`
     filter: brightness(1.15); /* Przyciemnienie domyślne */
     transition: filter 0.3s ease;
   }
-
- 
+  @media screen and (max-width: );
 `;
 
 const Column = styled.div`
@@ -108,25 +108,4 @@ const ColumnContainer = styled.div`
   display: flex;
   justify-content: space-around;
   margin: 10vh 15vw;
-`;
-
-const RectangleTextContainer = styled.div`
-  margin-left: -150px;
-  z-index: 20;
-`;
-
-const TextContainer = styled.div`
-  font-family: "Monsterrat", sans-serif;
-  font-weight: 700;
-  padding: 30px 50px;
-  font-size: clamp(1rem, 1.7vw, 3rem);
-  margin-left: 4vw;
-  margin-top: 5vh;
-  font-weight: 100;
-  width: 50vw;
-  height: 50%;
-  color: ${({ theme }) => theme.colors.primary};
-  box-shadow: -10px 0px 8px rgba(0, 0, 0, 0.1);
-  background: white;
-  z-index: 10;
 `;

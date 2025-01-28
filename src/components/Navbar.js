@@ -54,7 +54,6 @@ const Container = Styled.div`
     background: linear-gradient(#0072B6, #043694);
     height: 100px;
     width: 100%;
-    min-width: 600px;
     display: flex; 
     justify-content: center;
     align-items: start; 
@@ -83,4 +82,6 @@ height:100%;
 const ShieldSVGStyled = Styled(ShieldSVG)`
 width: 315px;
 z-index: 1;
+
+
 `;

@@ -40,14 +40,13 @@ export default OfertaSection;
 const HV = styled.div`
   padding: 10vh 0 10vh 0;
   margin: 0 auto 0 0;
-  height: 180vh;
   width: 100%;
   background: linear-gradient(#0072b6, #043694);
   margin-top: 20vh;
 `;
 
 const SectionTitleWrapper = styled.div`
-  margin-left: 10vw;
+  margin-left: 3vw;
 `;
 
 const ContentContainer = styled.div`

@@ -6,6 +6,8 @@ import { menuData } from "../components/data/menuData"
 import { RiInstagramFill } from "react-icons/ri"
 import { HashLink as Link } from "react-router-hash-link"
 import { BrowserRouter as Router } from "react-router-dom"
+import {StaticImage} from "gatsby-plugin-image"
+import ShieldSVG from "../assets/Shield.svg"
 
 function BurgerMenu() {
   const [isOpen, setOpen] = useState(false)
@@ -22,7 +24,9 @@ function BurgerMenu() {
       <MobileMenu open={isOpen}>
         <MobileContainer>
           <ScrollContainer>
-            <MobileTitle to="/">IDEO </MobileTitle>
+       
+            <MobileTitle to="/"><ShieldSVGStyled /></MobileTitle>
+       
             <Router>
               <LinkContainer>
                 {menuData.map((item, index) => (
@@ -50,6 +54,20 @@ function BurgerMenu() {
 
 export default BurgerMenu
 
+
+
+const ShieldSVGStyled = styled(ShieldSVG)`
+width: 250px;
+z-index: 1;
+display: flex;
+justify-content: center;
+justify-self:center;
+position: absolute;
+top: 0;
+left:50%;
+transform: translateX(-50%);
+`;
+
 // Mobile Menu
 const MobileMenu = styled.div`
   display: ${({ open }) => (open ? "flex" : "none")};
@@ -59,7 +77,8 @@ const MobileMenu = styled.div`
   right: 0;
   width: 100%;
   height: 100vh;
-  background: white;
+  background: linear-gradient(-30deg, #043694, #0072b6);
+  color: white;
   transition: all 0.35s;
   overflow: hidden;
   align-items: center;
@@ -106,7 +125,7 @@ const LinkContainer = styled.div`
 `
 
 const MobileLink = styled(Link)`
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 1.8rem;
   border-bottom: 1px solid black;
@@ -125,7 +144,7 @@ const BurgerWrapper = styled.div`
     right: 35px;
     z-index: 300;
     position: fixed;
-    color: ${({ open }) => (open ? "#000" : "#fff")};
+    color: #fff;
     font-size: 6rem;
     -webkit-tap-highlight-color: transparent;
   }
@@ -133,7 +152,7 @@ const BurgerWrapper = styled.div`
 
 const MobileTitle = styled.h2`
   font-family: "Oleo Script Swash Caps", cursive;
-  color: black;
+  color: white;
   font-size: 3rem;
   margin: 20px 0;
 `

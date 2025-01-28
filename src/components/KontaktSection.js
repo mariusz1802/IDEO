@@ -20,6 +20,7 @@ function KontaktSection() {
             firstWord={kontakt.titleFirstWord}
             secondWord={kontakt.titleSecondWord}
             underTitle={kontakt.underTitle}
+            textAlign="center"
           />
         </TitlePosition>
         <TextContent textContent={kontakt.textContent} />

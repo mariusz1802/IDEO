@@ -14,6 +14,7 @@ function KalkulatoryWyszSection() {
             firstWord={kalkulatoryWyszukiwarki.titleFirstWord}
             secondWord={kalkulatoryWyszukiwarki.titleSecondWord}
             underTitle={kalkulatoryWyszukiwarki.underTitle}
+            textAlign="center"
           />
         </TitlePosition>
         <TextContent textContent={kalkulatoryWyszukiwarki.textContent} />

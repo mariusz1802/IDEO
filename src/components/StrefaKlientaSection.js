@@ -14,6 +14,7 @@ function StrefaKlienta() {
             firstWord={strefaKlienta.titleFirstWord}
             secondWord={strefaKlienta.titleSecondWord}
             underTitle={strefaKlienta.underTitle}
+            textAlign="center"
           />
         </TitlePosition>
         <TextContent textContent={strefaKlienta.textContent} />

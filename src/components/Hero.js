@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import BurgerMenu from "./BurgerMenu";
 import Navbar from "./Navbar";
-import HeroSVG from "../assets/Hero_bck.svg";
 import { StaticImage } from "gatsby-plugin-image";
 import ButtonHero from "./ButtonHero";
 
@@ -22,9 +21,8 @@ function Hero() {
             top: 0,
             left: 0,
             zIndex: -1,
-            width: "100%",
-            height: "100%",
           }}
+
         />
         <div>
           <H1_Styled>
@@ -48,13 +46,14 @@ export default Hero;
 const HeroStyled = styled.div`
   font-family: "Raleway", sans-serif;
   position: relative;
-  width: 100%;
-  height: 100vh;
+  width: 100%; /* Rozciągnięcie na 100% szerokości ekranu */
+  height: 100vh; /* Wysokość na 100% widoku */
   display: flex;
   align-items: center;
   justify-content: left;
   text-align: left;
   padding-left: 3%;
+  overflow: hidden; /* Zapobiega wychodzeniu elementów poza kontener */
 `;
 
 const H1_Styled = styled.h1`
@@ -66,11 +65,12 @@ const H1_Styled = styled.h1`
     color: ${({ theme }) => theme.colors.brightBlue};
   }
 `;
+
 const P_Styled = styled.p`
   font-weight: 600;
   color: ${({ theme }) => theme.colors.darkBlue};
   font-size: clamp(1rem, 1.9vw, 3rem);
   width: 50%;
   margin-top: 2rem;
-  margin-bottom:2rem;
+  margin-bottom: 2rem;
 `;

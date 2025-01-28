@@ -7,17 +7,21 @@ function SectionTitle({
   underTitle,
   color,
   underTitleColor,
+  textAlign
 }) {
   const validColor = color === "white" ? "white" : undefined;
   const validUnderTitleColor =
     underTitleColor === "white" ? "white" : undefined;
+
+
+    const CenterAlign = textAlign === "center" ? "center" : undefined;
 
   return (
     <div>
       <H1_Styled color={validColor}>
         {firstWord} <span>{secondWord}</span>
       </H1_Styled>
-      <UnderTitle underTitleColor={validUnderTitleColor}>
+      <UnderTitle underTitleColor={validUnderTitleColor} textAlign={CenterAlign}>
         {underTitle}
       </UnderTitle>
     </div>
@@ -53,7 +57,7 @@ const H1_Styled = styled.h1`
 const UnderTitle = styled.p`
   font-family: "Raleway", sans-serif;
   font-size: clamp(1rem, 1.5vw, 4rem);
-  text-align: left;
+  text-align: ${({ textAlign }) => textAlign || "left"};
   padding-top: 0.6rem;
   color: ${({ underTitleColor, theme }) =>
     underTitleColor || theme.colors.text};
