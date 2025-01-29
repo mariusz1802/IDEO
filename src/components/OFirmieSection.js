@@ -16,10 +16,23 @@ export class OFirmieSection extends Component {
             underTitle={oFirmie.underTitle}
           />
           <ContentContainer>
-            <RectangleTextContainer>
+            <RectangleTextContainer data-sal="slide-right" data-sal-delay="300">
               <RectangleText text={oFirmie.textContent} />
             </RectangleTextContainer>
-            <StaticImage src="../assets/ksiegowa.png" alt="Księgowa" />
+            <div
+              data-sal="slide-left"
+              data-sal-easing="ease-out-back"
+              data-sal-delay="300"
+              data-sal-duration="1200"
+            >
+              <StaticImage
+                src="../assets/ksiegowa.png"
+                alt="Księgowa"
+                data-sal="flip-left"
+                data-sal-delay="300"
+                data-sal-duration="1200"
+              />
+            </div>
           </ContentContainer>
         </HV>
       </>

@@ -21,13 +21,13 @@ const IndexPage = () => {
       <GlobalStyles />
       <ScrollUpBtn />
       <Hero />
-      {/* <OFirmieSection />
+      <OFirmieSection />
       <OfertaSection />
       <CennikSection />
       <StrefaKlienta />
       <KalkulatoryWyszSection />
       <KontaktSection />
-      <Footer /> */}
+      <Footer />
     </ThemeProvider>
   );
 };

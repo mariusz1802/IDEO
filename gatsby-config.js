@@ -52,7 +52,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
-
+    `gatsby-plugin-scroll-reveal`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
     "gatsby-plugin-styled-components",
   ],

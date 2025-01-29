@@ -12,6 +12,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: Roboto, sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
+    background-color: white;
     color: #333;
   }
 

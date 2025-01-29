@@ -19,7 +19,7 @@ function BurgerMenu() {
   return (
     <>
       <BurgerWrapper open={isOpen}>
-        <Hamburger toggled={isOpen} toggle={setOpen} size={36} distance="sm" />
+        <Hamburger toggled={isOpen} toggle={setOpen} size={46} distance="sm" />
       </BurgerWrapper>
       <MobileMenu open={isOpen}>
         <MobileContainer>
@@ -140,12 +140,13 @@ const BurgerWrapper = styled.div`
   display: none;
   @media screen and (max-width: 1390px) {
     display: block;
-    top: 35px;
-    right: 35px;
+    top: 30px;
+    right: 30px;
     z-index: 300;
     position: fixed;
     color: #fff;
     font-size: 6rem;
+    background
     -webkit-tap-highlight-color: transparent;
   }
 `

@@ -82,6 +82,13 @@ height:100%;
 const ShieldSVGStyled = Styled(ShieldSVG)`
 width: 315px;
 z-index: 1;
+  @media screen and (max-width: 870px) {
+width: 250px;
+}
 
+@media screen and (max-width: 470px) {
+width: 200px;
+
+}
 
 `;
