@@ -8,10 +8,15 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
 import { FaSquareFacebook } from "react-icons/fa6";
 import { TiHome } from "react-icons/ti";
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
 import ContactForm from "./ContactForm.js";
+import MyMap from "./MyMap.js";
 
 function KontaktSection() {
+  const mapStyles = {
+    width: "100%",
+    height: "400px",
+  };
   return (
     <HV id="kontakt">
       <SectionTitleWrapper>
@@ -46,7 +51,14 @@ function KontaktSection() {
                 Lipcowa 5 <br /> Bielawa
               </PStyled>
             </Row>
-            <StaticImage src="../assets/mapa.jpg" alt="Mapa" />
+            <MapWrapper>
+              <h1>Mapa</h1>
+              <MyMap />
+              <StaticImage
+                src="https://www.google.com/maps/@?api=1&map_action=map&center=41.8781%2C-87.6298"
+                alt="mapa"
+              />
+            </MapWrapper>
           </Column>
           <Column>
             <ContactForm />
@@ -58,6 +70,11 @@ function KontaktSection() {
 }
 
 export default KontaktSection;
+const MapWrapper = styled.div`
+  position: relative;
+  width: 500px;
+  height: 400px;
+`;
 
 const PStyled = styled.p`
   margin-left: 10px;

@@ -23,6 +23,14 @@ module.exports = {
         path: `${__dirname}/src/assets/download`,
       },
     },
+
+    {
+      resolve: `@ccalamos/gatsby-source-googlemaps-static`,
+      options: {
+        key: `AIzaSyCRWb80QAGpOV4CYshKTH91uFZu2Pb0nZg`,
+        center: "41.8781,-87.6298",
+      },
+    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
