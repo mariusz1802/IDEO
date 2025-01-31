@@ -40,6 +40,10 @@ function SectionTitle({
   );
 }
 
+const Test = styled.div`
+font-family: "Agbalumo", serif !important;
+`
+
 const Wrapper = styled.div`
   text-align: center;
   display: flex;
@@ -51,7 +55,7 @@ const Wrapper = styled.div`
 `;
 
 const H1_Styled = styled.h1`
-  font-family: "Agbalumo";
+  font-family: "Agbalumo" !important;
   font-size: clamp(1.6rem, 4vw, 7rem);
   text-align: left;
   color: ${({ color, theme }) => color || theme.colors.text};
@@ -67,7 +71,7 @@ const H1_Styled = styled.h1`
 `;
 
 const UnderTitle = styled.p`
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif ;
   font-size: clamp(1rem, 1.5vw, 4rem);
   text-align: ${({ textAlign }) => textAlign || "left"};
   padding-top: 0.6rem;

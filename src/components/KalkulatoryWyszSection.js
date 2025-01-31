@@ -28,6 +28,10 @@ function KalkulatoryWyszSection() {
             <StaticImage
               src="../assets/Generato.png"
               alt="Generator_Mikrorachunku_Podatkowego"
+              data-sal="slide-right"
+              data-sal-easing="ease-out-back"
+              data-sal-delay="300"
+              data-sal-duration="1200"
             />
           </ButtonImage>
           <ButtonImage
@@ -37,6 +41,10 @@ function KalkulatoryWyszSection() {
             <StaticImage
               src="../assets/Wyszukiwarka_VAT.png"
               alt="Wyszukiwarka Czynnego Podatnika VAT"
+              data-sal="slide-up"
+              data-sal-easing="ease-out-back"
+              data-sal-delay="300"
+              data-sal-duration="1200"
             />
           </ButtonImage>
         </Column>
@@ -46,8 +54,13 @@ function KalkulatoryWyszSection() {
             <StaticImage
               src="../assets/Wyszukiwarka_Numeru.png"
               alt="Wyszukiwarka numeru rachunku składkowego"
+              data-sal="slide-down"
+              data-sal-easing="ease-out-back"
+              data-sal-delay="300"
+              data-sal-duration="1200"
             />
           </ButtonImage>
+
           <ButtonImage
             href="https://www.podatki.gov.pl/kalkulatory-podatkowe/kalkulator-odsetek-za-zwloke-od-zaleglosci-podatkowych-oraz-oplaty-prolongacyjnej/"
             target="_blank"

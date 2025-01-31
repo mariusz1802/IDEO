@@ -4,7 +4,12 @@ import styled from "styled-components";
 function TextContent({ textContent, color }) {
   const validWhite = color === "white" ? "white" : undefined;
 
-  return <TextContainer color={validWhite}>{textContent}</TextContainer>;
+  return <TextContainer color={validWhite}
+  data-sal="fade"
+  data-sal-easing="ease-out-back"
+  data-sal-delay="300"
+  data-sal-duration="1200"
+  >{textContent}</TextContainer>;
 }
 
 export default TextContent;

@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const RoundButton = styled.button`
-  font-family: "Raleway";
+  font-family: "Raleway", sans-serif;
   font-size: clamp(2rem, 2vw, 8rem);
-  background: linear-gradient( #092abeff, #011882); /* Kolor bazowy */
+  background: linear-gradient(#092abeff, #011882); /* Kolor bazowy */
   color: #fff; /* Kolor tekstu */
   border: none;
   border-radius: 60px; /* Okrągły kształt */
@@ -19,7 +19,10 @@ const RoundButton = styled.button`
   &:hover {
     background-color: ${({ theme }) =>
       theme.colors.brightBlue}; /* Kolor po najechaniu */
-        background: linear-gradient( #2145E7FF, #0B2DC2FF); /* Kolor bazowy *
+    background: linear-gradient(
+      #2145e7ff,
+      #0b2dc2ff
+    ); /* Kolor bazowy *
     transform: scale(1.1); /* Powiększenie przycisku */
   }
   /* Animacja tła */
@@ -51,7 +54,16 @@ const RoundButton = styled.button`
 `;
 
 const ButtonHero = () => {
-  return <RoundButton>Sprawdź</RoundButton>;
+  return (
+    <RoundButton
+      data-sal="zoom-in"
+      data-sal-easing="ease-out-back"
+      data-sal-delay="300"
+      data-sal-duration="800"
+    >
+      Sprawdź
+    </RoundButton>
+  );
 };
 
 export default ButtonHero;

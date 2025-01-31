@@ -8,57 +8,62 @@ import ButtonHero from "./ButtonHero";
 import { useMediaQuery } from "react-responsive";
 
 function Hero() {
-  const isMobile = useMediaQuery({maxWidth: 870})
+  const isMobile = useMediaQuery({ maxWidth: 870 });
   return (
     <>
       <BurgerMenu />
       <Navbar />
       <HeroStyled>
+        {isMobile ? (
+          <StaticImage
+            src="../assets/Hero_bck_mobile.svg"
+            alt="Background"
+            layout="fullWidth"
+            quality={100}
+            objectFit="cover"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              zIndex: -1,
+              width: "100%",
+              height: "100%",
+            }}
+          />
+        ) : (
+          <StaticImage
+            src="../assets/Hero_bck.svg"
+            alt="Background"
+            layout="fullWidth"
+            quality={100}
+            objectFit="cover"
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              zIndex: -1,
+              width: "100%",
+              height: "100%",
+            }}
+          />
+        )}
 
-     {
-       isMobile  ?
-
-       <StaticImage
-       src="../assets/Hero_bck_mobile.svg"
-       alt="Background"
-       layout="fullWidth"
-       quality={100}
-       objectFit="cover"
-       style={{
-         position: "absolute",
-         top: 0,
-         left: 0,
-         zIndex: -1,
-         width: "100%",
-         height: "100%",
-       }}
-     />
-
-     :
-     <StaticImage
-     src="../assets/Hero_bck.svg"
-     alt="Background"
-     layout="fullWidth"
-     quality={100}
-     objectFit="cover"
-     style={{
-       position: "absolute",
-       top: 0,
-       left: 0,
-       zIndex: -1,
-       width: "100%",
-       height: "100%",
-     }}
-   />
-       
-    } 
-   
         <TextContainer>
-          <H1_Styled>
+          <H1_Styled
+            data-sal="slide-right"
+            data-sal-easing="ease-out-back"
+            data-sal-delay="100"
+            data-sal-duration="1000"
+          >
             Księgowość <br />
             <span> dla Twojego biznesu </span>
           </H1_Styled>
-          <P_Styled>
+          <P_Styled
+            data-sal="slide-right"
+            data-sal-easing="ease-out-back"
+            data-sal-delay="300"
+            data-sal-duration="800"
+          >
             Oferujemy kompleksowe usługi księgowe dostosowane do potrzeb Twojego
             biznesu. Zadbamy o Twoje finanse, abyś mógł skupić się na tym, co
             najważniejsze.

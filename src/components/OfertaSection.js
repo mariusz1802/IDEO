@@ -18,8 +18,15 @@ function OfertaSection() {
         <TextContent textContent={oferta.textContent} color="white" />
       </SectionTitleWrapper>
       <ContentContainer>
+      <div
+              data-sal="slide-right"
+              data-sal-easing="ease-out-back"
+              data-sal-delay="300"
+              data-sal-duration="1200"
+            >
         <StaticImage src="../assets/calc.png" alt="Kalkulator" />
-        <RectangleTextContainer>
+        </div>
+        <RectangleTextContainer data-sal="slide-left" data-sal-delay="300">
           <TextContainer>
             <ul>
               <li>Książka przychodów i rozchodów</li>

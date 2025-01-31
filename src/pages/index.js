@@ -16,20 +16,22 @@ import KontaktSection from "../components/KontaktSection";
 import Footer from "../components/Footer";
 
 const IndexPage = () => {
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <ScrollUpBtn />
-      <Hero />
-      <OFirmieSection />
-      <OfertaSection />
-      <CennikSection />
-      <StrefaKlienta />
-      <KalkulatoryWyszSection />
-      <KontaktSection />
-      <Footer />
-    </ThemeProvider>
-  );
+  if (typeof window !== "undefined") {
+    return (
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <ScrollUpBtn />
+        <Hero />
+        <OFirmieSection />
+        <OfertaSection />
+        <CennikSection />
+        <StrefaKlienta />
+        <KalkulatoryWyszSection />
+        <KontaktSection />
+        <Footer />
+      </ThemeProvider>
+    );
+  }
 };
 
 export default IndexPage;

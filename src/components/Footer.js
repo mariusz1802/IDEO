@@ -48,7 +48,7 @@ function Footer() {
           </Column>
           <Column>
             <TitleColumn>Certyfikat:</TitleColumn>
-            <ButtonImage
+            <ButtonImageStyled
               href="https://www.cik.org.pl/biuro/ideo-marta-szkatulska-94918"
               target="_blank"
             >
@@ -56,7 +56,7 @@ function Footer() {
                 src="../assets/CIK_footer_btn.png"
                 alt="Przycisk_CIK"
               />
-            </ButtonImage>
+            </ButtonImageStyled>
           </Column>
         </MainSection>
 
@@ -68,6 +68,10 @@ function Footer() {
     </FooterContainer>
   );
 }
+
+const ButtonImageStyled = styled(ButtonImage)`
+width: 195px;
+`
 
 const CardContainer = styled.div`
   position: absolute; /* Wyjmij z normalnego przepływu */
@@ -135,16 +139,18 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 10px 10px 60px 10px;
   margin: 0 10px;
-  /* width: 35%; */
-  background: rgba(255, 255, 255, 0.1);
+  border-right: 1px solid white;
+  padding: 10px 10px 60px 10px;
 `;
 
 const MainSection = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: top;
+  :last-child{
+    border-right: none;
+  }
 `;
 
 const BlueContainer = styled.div`

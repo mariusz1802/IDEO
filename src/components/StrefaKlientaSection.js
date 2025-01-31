@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import SectionTitle from "./SectionTitle.js";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
@@ -6,6 +7,19 @@ import { strefaKlienta } from "./data/contentData.js";
 import TextContent from "./TextContent.js";
 
 function StrefaKlienta() {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(filter: { extension: { eq: "pdf" } }) {
+        edges {
+          node {
+            publicURL
+            relativePath
+            id
+          }
+        }
+      }
+    }
+  `);
   return (
     <HV id="strefaKlienta">
       <SectionTitleWrapper>
@@ -22,36 +36,36 @@ function StrefaKlienta() {
       <ColumnContainer>
         <Column>
           <ButtonImage
-            href="https://www.cik.org.pl/kalkulator-cen-uslug-ksiegowych"
-            target="_blank"
+            href="/static/723fb4ce79718f4ea8d51ef46a3bc15b/Umowa o pracę - wzór.pdf"
+          download
           >
             <StaticImage
               src="../assets/umowa-o-prace.png"
-              alt="Umowa_o_pracę"
+              alt="Umowa_o_pracę.pdf"
             />
           </ButtonImage>
           <ButtonImage
-            href="https://www.cik.org.pl/kalkulator-cen-uslug-ksiegowych"
-            target="_blank"
+            href="/static/9ade32d350337de1ce378af0f550dbae/Pełnomocnictwo ZUS - PEL.pdf"
+         download
           >
             <StaticImage
               src="../assets/pelnomocnitwo-zus.png"
-              alt="Umowa_o_pracę"
+              alt="Pełnomocnictwo_ZUS.pdf"
             />
           </ButtonImage>
         </Column>
 
         <Column>
-          <ButtonImage href="tel:+48790578923">
+          <ButtonImage href="/static/1ea9537371de565907631eb07b23a73e/Umowy zlecenie - wzór.pdf" download>
             <StaticImage
               src="../assets/umowa-zlecenie.png"
-              alt="Zadzwoń_teraz"
+              alt="Umowa_Zlecenie.pdf"
             />
           </ButtonImage>
-          <ButtonImage href="tel:+48790578923">
+          <ButtonImage href="/static/cc8fd4ccfbc88abad0bb937e4a3887bc/Pełnomocnictwo US - UPL-1P.pdf" download>
             <StaticImage
               src="../assets/pelnomocnictwo-us.png"
-              alt="Zadzwoń_teraz"
+              alt="Pełnomocnictwo_US.pdf"
             />
           </ButtonImage>
         </Column>

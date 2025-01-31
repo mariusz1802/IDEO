@@ -20,7 +20,12 @@ function CennikSecition() {
         <TextContent textContent={cennikUslug.textContent} />
       </SectionTitleWrapper>
       <ColumnContainer>
-        <Column>
+        <Column  
+              data-sal="slide-right"
+              data-sal-easing="ease-out-back"
+              data-sal-delay="300"
+              data-sal-duration="1200"
+            >
           <TitleColumn>Orientacyjne ceny: </TitleColumn>
           <ButtonImage
             href="https://www.cik.org.pl/kalkulator-cen-uslug-ksiegowych"
@@ -30,7 +35,12 @@ function CennikSecition() {
           </ButtonImage>
         </Column>
 
-        <Column>
+        <Column
+          data-sal="slide-left"
+          data-sal-easing="ease-out-back"
+          data-sal-delay="300"
+          data-sal-duration="1200"
+        >
           <TitleColumn> Zapytaj o ofertę: </TitleColumn>
           <ButtonImage href="tel:+48790578923">
             <StaticImage
@@ -74,7 +84,6 @@ export const ButtonImage = styled.a`
     filter: brightness(1.15); /* Przyciemnienie domyślne */
     transition: filter 0.3s ease;
   }
-  @media screen and (max-width: );
 `;
 
 const Column = styled.div`

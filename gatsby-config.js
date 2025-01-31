@@ -15,6 +15,14 @@ module.exports = {
         root: path.join(__dirname, "src"),
       },
     },
+
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "downloads",
+        path: `${__dirname}/src/assets/download`,
+      },
+    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -24,20 +32,25 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-fonts-v2`,
+      resolve: `gatsby-omni-font-loader`,
       options: {
-        fonts: [
+        enableListener: true,
+        preconnect: [
+          `https://fonts.googleapis.com`,
+          `https://fonts.gstatic.com`,
+        ],
+        web: [
           {
-            family: "Raleway",
-            weights: ["100", "200", "300", "400", "500", "700", "600", "900"],
+            name: `Agbalumo`,
+            file: `https://fonts.googleapis.com/css2?family=Agbalumo&display=swap`,
           },
           {
-            family: "Agbalumo",
-            weights: ["500"],
+            name: `Raleway`,
+            file: `https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap`,
           },
           {
-            family: "Monsterrat",
-            weights: ["100", "200", "300", "400", "500", "700", "600", "900"],
+            name: `Montserrat`,
+            file: `https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap`,
           },
         ],
       },
@@ -51,6 +64,7 @@ module.exports = {
         },
       },
     },
+    "gatsby-plugin-loadable-components-ssr",
     `gatsby-plugin-image`,
     `gatsby-plugin-scroll-reveal`,
     `gatsby-transformer-sharp`, // Needed for dynamic images

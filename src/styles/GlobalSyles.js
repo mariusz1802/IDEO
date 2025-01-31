@@ -14,6 +14,8 @@ const GlobalStyles = createGlobalStyle`
     background-color: #f9f9f9;
     background-color: white;
     color: #333;
+  overflow-x: hidden;
+
   }
 
   a {
