@@ -18,6 +18,7 @@ const ButtonAnchor = styled(AnchorLink)`
   z-index: 100;
   transition: 0.8s ease-in-out;
   white-space: pre-wrap;
+  text-transform: uppercase;
   &:hover {
     cursor: pointer;
     background: linear-gradient(#018cdf, #0f4ab6);

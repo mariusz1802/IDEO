@@ -11,12 +11,9 @@ import { TiHome } from "react-icons/ti";
 import { StaticImage, GatsbyImage } from "gatsby-plugin-image";
 import ContactForm from "./ContactForm.js";
 import MyMap from "./MyMap.js";
+import { A } from "storybook/internal/components";
 
 function KontaktSection() {
-  const mapStyles = {
-    width: "100%",
-    height: "400px",
-  };
   return (
     <HV id="kontakt">
       <SectionTitleWrapper>
@@ -35,15 +32,27 @@ function KontaktSection() {
           <Column>
             <Row>
               <FaPhoneAlt />
-              <PStyled>+48 790 578 923</PStyled>
+              <PStyled>
+                {" "}
+                <AStyle href="tel: +48790578923">+48 790 578 923</AStyle>
+              </PStyled>
             </Row>
             <Row>
               <IoMail />
-              <PStyled>biuro@ideo.pl</PStyled>
+              <PStyled>
+                <AStyle href="mailto: biuro@ideo.pl">biuro@ideo.pl </AStyle>
+              </PStyled>
             </Row>
             <Row>
               <FaSquareFacebook />
-              <PStyled>Facebook</PStyled>
+              <PStyled>
+                <AStyle
+                  href="https://www.facebook.com/ideoksiegowosc"
+                  target="_blank"
+                >
+                  Facebook
+                </AStyle>
+              </PStyled>
             </Row>
             <Row>
               <TiHome />
@@ -69,10 +78,16 @@ function KontaktSection() {
   );
 }
 
+const AStyle = styled.a`
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export default KontaktSection;
 const MapWrapper = styled.div`
   position: relative;
-  width: 500px;
+  width: 100%;
   height: 400px;
 `;
 

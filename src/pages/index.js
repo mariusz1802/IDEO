@@ -36,4 +36,9 @@ const IndexPage = () => {
 
 export default IndexPage;
 
-export const Head = () => <title>IDEO Biuro Rachunkowe</title>;
+export const Head = () => (
+  <>
+    <title>IDEO Biuro Rachunkowe</title>
+    <html lang="pl-PL" />
+  </>
+);

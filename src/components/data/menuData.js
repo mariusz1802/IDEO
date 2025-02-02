@@ -5,12 +5,12 @@ import { PiPhoneCallFill } from "react-icons/pi";
 import { IoMdMail } from "react-icons/io";
 
 export const menuData = [
-  { title: "OFERTA", link: "/#oferta" },
-  { title: "CENNIK", link: "/#cennik" },
-  { title: "OPINIE", link: "/#opinie" },
-  { title: "STREFA \nKLIENTA", link: "/#strefaKlienta" },
-  { title: "KALKULATORY \nI WYSZUKIRWARKI", link: "/#kalkulatory" },
-  { title: "KONTAKT ", link: "/#kontakt" },
+  { title: "Oferta", link: "/#oferta" },
+  { title: "Cennik", link: "/#cennik" },
+  { title: "Opinie", link: "/#opinie" },
+  { title: "Strefa \nKlienta", link: "/#strefaKlienta" },
+  { title: "Kalkulatory \ni Wyszukiwarki", link: "/#kalkulatory" },
+  { title: "Kontakt ", link: "/#kontakt" },
 ];
 
 export const labelData = [

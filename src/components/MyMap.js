@@ -10,18 +10,19 @@ const MyMap = (props) => {
   return (
     <Map
       google={props.google}
-      zoom={12}
+      zoom={16}
       style={mapStyles}
       initialCenter={{
-        lat: 52.2298, // Warszawa (możesz zmienić)
-        lng: 21.0122,
+        lat: 50.671119,
+        lng: 16.605582,
       }}
     >
-      <Marker position={{ lat: 52.2298, lng: 21.0122 }} />
+      <Marker position={{ lat: 50.671119, lng: 16.605582 }} />
     </Map>
   );
 };
 
 export default GoogleApiWrapper({
   apiKey: "AIzaSyCRWb80QAGpOV4CYshKTH91uFZu2Pb0nZg",
+  language: "pl",
 })(MyMap);
