@@ -46,15 +46,29 @@ const HV = styled.div`
   padding: 5vh 0 5vh 3vw;
   margin: 0 0 0 auto;
   width: 100%;
+  @media screen and (max-width: 700px) {
+    padding: 10vh 0 10vh 0;
+  }
+
 `;
 
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 
 const RectangleTextContainer = styled.div`
   margin-right: -50px;
   z-index: 20;
+  @media screen and (max-width: 700px) {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 700px) {
+    margin-right: 0;
+  }
 `;

@@ -6,6 +6,10 @@ const mapStyles = {
   height: "100%",
 };
 
+const apiKey = process.env.GATSBY_API_KEY;
+
+console.log("API Key: ", apiKey);
+
 const MyMap = (props) => {
   return (
     <Map
@@ -23,6 +27,6 @@ const MyMap = (props) => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: "AIzaSyCRWb80QAGpOV4CYshKTH91uFZu2Pb0nZg",
+  apiKey: apiKey,
   language: "pl",
 })(MyMap);

@@ -18,13 +18,13 @@ function OfertaSection() {
         <TextContent textContent={oferta.textContent} color="white" />
       </SectionTitleWrapper>
       <ContentContainer>
-      <div
-              data-sal="slide-right"
-              data-sal-easing="ease-out-back"
-              data-sal-delay="300"
-              data-sal-duration="1200"
-            >
-        <StaticImage src="../assets/calc.png" alt="Kalkulator" />
+        <div
+          data-sal="slide-right"
+          data-sal-easing="ease-out-back"
+          data-sal-delay="300"
+          data-sal-duration="1200"
+        >
+          <StaticImage src="../assets/calc.png" alt="Kalkulator" />
         </div>
         <RectangleTextContainer data-sal="slide-left" data-sal-delay="300">
           <TextContainer>
@@ -54,6 +54,7 @@ const HV = styled.div`
 
 const SectionTitleWrapper = styled.div`
   margin-left: 3vw;
+
 `;
 
 const ContentContainer = styled.div`
@@ -61,16 +62,24 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  @media screen and (max-width: 700px) {
+    flex-direction: column-reverse;
+  padding-top: 0;
+
+  }
 `;
 
 const RectangleTextContainer = styled.div`
   margin-left: -150px;
   z-index: 20;
+  @media screen and (max-width: 700px) {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
 `;
 
 const TextContainer = styled.div`
-  font-family: "Monsterrat", sans-serif;
-  font-weight: 700;
+  font-weight: 900;
   padding: 30px 50px;
   font-size: clamp(1rem, 1.7vw, 3rem);
   margin-left: 4vw;
@@ -82,4 +91,16 @@ const TextContainer = styled.div`
   box-shadow: -10px 0px 8px rgba(0, 0, 0, 0.1);
   background: white;
   z-index: 10;
+  @media screen and (max-width: 870px) {
+    padding: 10px 20px;
+  }
+  @media screen and (max-width: 700px) {
+    width: 90vw;
+    margin-bottom: 30px;
+    height: 80%;
+    margin-left: 0;
+    font-size: 1.3rem;
+    padding: 30px;
+    margin-top: 5vh;
+  }
 `;

@@ -16,7 +16,7 @@ function SectionTitle({
   const CenterAlign = textAlign === "center" ? "center" : undefined;
 
   return (
-    <div>
+    <Container>
       <H1_Styled
         color={validColor}
         data-sal="flip-up"
@@ -36,22 +36,14 @@ function SectionTitle({
       >
         {underTitle}
       </UnderTitle>
-    </div>
+    </Container>
   );
 }
 
-const Test = styled.div`
-font-family: "Agbalumo", serif !important;
-`
-
-const Wrapper = styled.div`
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: auto;
-  background: red;
+const Container = styled.div`
+  @media screen and (max-width: 700px) {
+    margin-left: 30px;
+  }
 `;
 
 const H1_Styled = styled.h1`
@@ -68,16 +60,22 @@ const H1_Styled = styled.h1`
     text-decoration-thickness: 6px;
     text-underline-offset: 15px;
   }
+  @media screen and (max-width: 700px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const UnderTitle = styled.p`
-  font-family: "Raleway", sans-serif ;
+  font-family: "Raleway", sans-serif;
   font-size: clamp(1rem, 1.5vw, 4rem);
   text-align: ${({ textAlign }) => textAlign || "left"};
   padding-top: 0.6rem;
   color: ${({ underTitleColor, theme }) =>
     underTitleColor || theme.colors.text};
   text-transform: uppercase;
+  @media screen and (max-width: 700px) {
+    font-size: 1.3rem;
+  }
 `;
 
 export default SectionTitle;

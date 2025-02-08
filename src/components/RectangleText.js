@@ -1,13 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-
-function RectangleText({text}) {
-  return (
-    <TextContainer>
-{text}
-    </TextContainer>
-  );
+function RectangleText({ text }) {
+  return <TextContainer>{text}</TextContainer>;
 }
 
 export default RectangleText;
@@ -24,4 +19,14 @@ export const TextContainer = styled.div`
   box-shadow: 10px 0px 8px rgba(0, 0, 0, 0.1);
   background: white;
   z-index: 10;
+  @media screen and (max-width: 870px) {
+    padding: 10px 20px;
+  }
+  @media screen and (max-width: 700px) {
+    width: 90vw;
+    margin-bottom: 30px;
+    height: 80%;
+    margin-left: 0;
+    font-size: 1.3rem;
+  }
 `;
