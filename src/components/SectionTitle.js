@@ -19,20 +19,20 @@ function SectionTitle({
     <Container>
       <H1_Styled
         color={validColor}
-        data-sal="flip-up"
-        data-sal-easing="ease-out-back"
-        data-sal-delay="300"
-        data-sal-duration="1200"
+        // data-sal="flip-up"
+        // data-sal-easing="ease-out-back"
+        // data-sal-delay="300"
+        // data-sal-duration="1200"
       >
         {firstWord} <span>{secondWord}</span>
       </H1_Styled>
       <UnderTitle
         underTitleColor={validUnderTitleColor}
         textAlign={CenterAlign}
-        data-sal="flip-down"
-        data-sal-easing="ease-out-back"
-        data-sal-delay="300"
-        data-sal-duration="1200"
+        // data-sal="flip-down"
+        // data-sal-easing="ease-out-back"
+        // data-sal-delay="300"
+        // data-sal-duration="1200"
       >
         {underTitle}
       </UnderTitle>
@@ -62,6 +62,7 @@ const H1_Styled = styled.h1`
   }
   @media screen and (max-width: 700px) {
     font-size: 2.5rem;
+    text-align: center;
   }
 `;
 
@@ -75,6 +76,8 @@ const UnderTitle = styled.p`
   text-transform: uppercase;
   @media screen and (max-width: 700px) {
     font-size: 1.3rem;
+    text-align: center;
+
   }
 `;
 

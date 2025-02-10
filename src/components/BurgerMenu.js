@@ -1,20 +1,20 @@
-import React, { useState } from "react"
-import styled from "styled-components"
-import { BsFacebook } from "react-icons/bs"
-import Hamburger from "hamburger-react"
-import { menuData } from "../components/data/menuData"
-import { RiInstagramFill } from "react-icons/ri"
-import { HashLink as Link } from "react-router-hash-link"
-import { BrowserRouter as Router } from "react-router-dom"
-import {StaticImage} from "gatsby-plugin-image"
-import ShieldSVG from "../assets/Shield.svg"
+import React, { useState } from "react";
+import styled from "styled-components";
+import { BsFacebook } from "react-icons/bs";
+import Hamburger from "hamburger-react";
+import { menuData } from "../components/data/menuData";
+import { RiInstagramFill } from "react-icons/ri";
+import { HashLink as Link } from "react-router-hash-link";
+import { BrowserRouter as Router } from "react-router-dom";
+import { StaticImage } from "gatsby-plugin-image";
+import ShieldSVG from "../assets/Shield.svg";
 
 function BurgerMenu() {
-  const [isOpen, setOpen] = useState(false)
+  const [isOpen, setOpen] = useState(false);
 
   const handleClick = () => {
-    setOpen(!isOpen)
-  }
+    setOpen(!isOpen);
+  };
 
   return (
     <>
@@ -24,9 +24,10 @@ function BurgerMenu() {
       <MobileMenu open={isOpen}>
         <MobileContainer>
           <ScrollContainer>
-       
-            <MobileTitle to="/"><ShieldSVGStyled /></MobileTitle>
-       
+            <MobileTitle to="/">
+              <ShieldSVGStyled />
+            </MobileTitle>
+
             <Router>
               <LinkContainer>
                 {menuData.map((item, index) => (
@@ -49,23 +50,21 @@ function BurgerMenu() {
         </MobileContainer>
       </MobileMenu>
     </>
-  )
+  );
 }
 
-export default BurgerMenu
-
-
+export default BurgerMenu;
 
 const ShieldSVGStyled = styled(ShieldSVG)`
-width: 250px;
-z-index: 1;
-display: flex;
-justify-content: center;
-justify-self:center;
-position: absolute;
-top: 0;
-left:50%;
-transform: translateX(-50%);
+  width: 250px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 `;
 
 // Mobile Menu
@@ -84,7 +83,7 @@ const MobileMenu = styled.div`
   align-items: center;
   z-index: 250;
   opacity: ${({ open }) => (open ? 1 : 0)};
-`
+`;
 const MobileContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -97,13 +96,13 @@ const MobileContainer = styled.div`
   align-content: center;
   width: 100%;
   z-index: 2;
-`
+`;
 const ScrollContainer = styled.div`
   height: 70%;
   width: 100%;
   margin-top: 100px;
   text-align: center;
-`
+`;
 
 const SocialContainer = styled.div`
   width: 120px;
@@ -112,7 +111,7 @@ const SocialContainer = styled.div`
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
-`
+`;
 
 const LinkContainer = styled.div`
   display: flex;
@@ -122,7 +121,7 @@ const LinkContainer = styled.div`
   font-size: 1.7rem;
   text-decoration: none;
   width: 100%;
-`
+`;
 
 const MobileLink = styled(Link)`
   color: white;
@@ -135,7 +134,7 @@ const MobileLink = styled(Link)`
   :first-child {
     border-top: 1px solid black;
   }
-`
+`;
 const BurgerWrapper = styled.div`
   display: none;
   @media screen and (max-width: 1390px) {
@@ -146,14 +145,16 @@ const BurgerWrapper = styled.div`
     position: fixed;
     color: #fff;
     font-size: 6rem;
-    background
+    background: rgba(1,25,131, 0.5);
+    padding: 5px;
+    border-radius: 5px;
     -webkit-tap-highlight-color: transparent;
   }
-`
+`;
 
 const MobileTitle = styled.h2`
   font-family: "Oleo Script Swash Caps", cursive;
   color: white;
   font-size: 3rem;
   margin: 20px 0;
-`
+`;

@@ -16,20 +16,21 @@ import { A } from "storybook/internal/components";
 function KontaktSection() {
   return (
     <HV id="kontakt">
-      <SectionTitleWrapper>
         <TitlePosition>
           <SectionTitle
             firstWord={kontakt.titleFirstWord}
             secondWord={kontakt.titleSecondWord}
             underTitle={kontakt.underTitle}
             textAlign="center"
-          />
+            />
         </TitlePosition>
+            <SectionTitleWrapper>
         <TextContent textContent={kontakt.textContent} />
       </SectionTitleWrapper>
       <IconContext.Provider value={{ size: "1.8em", color: "#444343" }}>
         <ColumnWrapper>
           <Column>
+            <H3_title>Dane Kontaktowe: </H3_title>
             <Row>
               <FaPhoneAlt />
               <PStyled>
@@ -61,7 +62,7 @@ function KontaktSection() {
               </PStyled>
             </Row>
             <MapWrapper>
-              <h1>Mapa</h1>
+              <H3_title>Mapa:</H3_title>
               <MyMap />
               <StaticImage
                 src="https://www.google.com/maps/@?api=1&map_action=map&center=41.8781%2C-87.6298"
@@ -70,6 +71,7 @@ function KontaktSection() {
             </MapWrapper>
           </Column>
           <Column>
+          <H3_title>Formularz kontaktowy: </H3_title>
             <ContactForm />
           </Column>
         </ColumnWrapper>
@@ -77,6 +79,15 @@ function KontaktSection() {
     </HV>
   );
 }
+
+const H3_title = styled.h3`
+  font-family: "Agbalumo" !important;
+  font-size: clamp(1.2rem, 2vw, 3rem);
+  @media screen and (max-width: 700px) {
+    font-size: 2.2rem;
+    margin: 25px 0;
+  }
+`;
 
 const AStyle = styled.a`
   &:hover {
@@ -104,6 +115,9 @@ const ColumnWrapper = styled.div`
   justify-content: space-around;
   margin: auto;
   width: 80%;
+  @media screen and (max-width: 700px) {
+    flex-direction: column-reverse;
+  }
 `;
 
 const Column = styled.div`
@@ -111,7 +125,14 @@ const Column = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 45%;
+
   justify-content: space-around;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+
+  }
 `;
 
 const Row = styled.div`

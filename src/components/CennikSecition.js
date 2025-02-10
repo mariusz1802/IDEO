@@ -8,24 +8,24 @@ import TextContent from "./TextContent.js";
 function CennikSecition() {
   return (
     <HV id="cennik">
-      <SectionTitleWrapper>
         <TitlePosition>
           <SectionTitle
             firstWord={cennikUslug.titleFirstWord}
             secondWord={cennikUslug.titleSecondWord}
             underTitle={cennikUslug.underTitle}
             textAlign="center"
-          />
+            />
         </TitlePosition>
+            <SectionTitleWrapper>
         <TextContent textContent={cennikUslug.textContent} />
       </SectionTitleWrapper>
       <ColumnContainer>
-        <Column  
-              data-sal="slide-right"
-              data-sal-easing="ease-out-back"
-              data-sal-delay="300"
-              data-sal-duration="1200"
-            >
+        <Column
+        // data-sal="slide-right"
+        // data-sal-easing="ease-out-back"
+        // data-sal-delay="300"
+        // data-sal-duration="1200"
+        >
           <TitleColumn>Orientacyjne ceny: </TitleColumn>
           <ButtonImage
             href="https://www.cik.org.pl/kalkulator-cen-uslug-ksiegowych"
@@ -36,10 +36,10 @@ function CennikSecition() {
         </Column>
 
         <Column
-          data-sal="slide-left"
-          data-sal-easing="ease-out-back"
-          data-sal-delay="300"
-          data-sal-duration="1200"
+        // data-sal="slide-left"
+        // data-sal-easing="ease-out-back"
+        // data-sal-delay="300"
+        // data-sal-duration="1200"
         >
           <TitleColumn> Zapytaj o ofertę: </TitleColumn>
           <ButtonImage href="tel:+48790578923">
@@ -67,6 +67,10 @@ export const ButtonImage = styled.a`
   width: 440px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+  @media screen and (max-width: 600px){
+    width:300px;
+  }
+
   &:hover {
     cursor: pointer;
     transform: scale(1.01); /* Powiększenie przycisku */
@@ -89,12 +93,16 @@ export const ButtonImage = styled.a`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
+  margin-right: 25px;
 `;
 
 const TitleColumn = styled.div`
   font-family: "Agbalumo";
   font-size: clamp(1.3rem, 3vw, 5rem);
   color: ${({ color, theme }) => color || theme.colors.titleColor};
+  @media screen and (max-width: 700px) {
+    font-size: 2.2rem;
+  }
 `;
 
 const TitlePosition = styled.div`
@@ -117,4 +125,10 @@ const ColumnContainer = styled.div`
   display: flex;
   justify-content: space-around;
   margin: 10vh 15vw;
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10vw;
+  }
 `;

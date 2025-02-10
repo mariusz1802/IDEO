@@ -95,20 +95,26 @@ const CardContainer = styled.div`
   z-index: 1000; /* Zapewnij, że będzie nad innymi elementami */
   background-color: white; /* Dodaj tło, aby wyróżnić treść */
   width: 32%;
+  @media screen and (max-width: 1000px){
+  padding: 10px 20px;
+  width: 40%;
+  bottom: 100px;
+}
 `;
 
 const TextContainer = styled.p`
   color: ${({ theme }) => theme.colors.brightBlue};
   font-size: clamp(1rem, 1.3vw, 2.5rem);
-  /* font-size: 1rem; */
+
 `;
+
 
 export default Footer;
 
 const FooterContainer = styled.div`
   position: relative; /* Ważne dla pozycji absolutnej dzieci */
   display: flex;
-  flex-direction: column; /* Ustaw kolumnę dla układu pionowego */
+  flex-direction: column;
   width: 100%;
 `;
 
@@ -157,6 +163,12 @@ const Column = styled.div`
   margin: 0 10px;
   border-right: 1px solid white;
   padding: 10px 10px 60px 10px;
+  @media screen and (max-width: 1000px) {
+    &:nth-child(2) {
+      display: none;
+      margin: 0 5px;
+    }
+  }
 `;
 
 const MainSection = styled.div`
@@ -165,6 +177,8 @@ const MainSection = styled.div`
   align-items: top;
   :last-child {
     border-right: none;
+  }
+
   }
 `;
 

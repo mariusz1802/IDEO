@@ -8,15 +8,15 @@ import TextContent from "./TextContent.js";
 function KalkulatoryWyszSection() {
   return (
     <HV id="kalkulatory">
-      <SectionTitleWrapper>
         <TitlePosition>
           <SectionTitle
             firstWord={kalkulatoryWyszukiwarki.titleFirstWord}
             secondWord={kalkulatoryWyszukiwarki.titleSecondWord}
             underTitle={kalkulatoryWyszukiwarki.underTitle}
             textAlign="center"
-          />
+            />
         </TitlePosition>
+            <SectionTitleWrapper>
         <TextContent textContent={kalkulatoryWyszukiwarki.textContent} />
       </SectionTitleWrapper>
       <ColumnContainer>
@@ -132,6 +132,8 @@ const ButtonImage = styled.a`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
+  margin: 5px;
+
 `;
 
 const TitleColumn = styled.div`
@@ -162,4 +164,8 @@ const ColumnContainer = styled.div`
   justify-self: center;
   width: 50%;
   justify-content: space-around;
+  @media screen and (max-width: 1200px) {
+    width: 90%;
+  }
+  
 `;

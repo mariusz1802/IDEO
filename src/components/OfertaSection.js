@@ -8,13 +8,13 @@ import TextContent from "./TextContent.js";
 function OfertaSection() {
   return (
     <HV id="oferta">
-      <SectionTitleWrapper>
         <SectionTitle
           firstWord={oferta.titleFirstWord}
           underTitle={oferta.underTitle}
           color="white"
           underTitleColor="white"
-        />
+          />
+          <SectionTitleWrapper>
         <TextContent textContent={oferta.textContent} color="white" />
       </SectionTitleWrapper>
       <ContentContainer>
@@ -26,7 +26,10 @@ function OfertaSection() {
         >
           <StaticImage src="../assets/calc.png" alt="Kalkulator" />
         </div>
-        <RectangleTextContainer data-sal="slide-left" data-sal-delay="300">
+        <RectangleTextContainer 
+        // data-sal="slide-left" 
+        // data-sal-delay="300"
+        >
           <TextContainer>
             <ul>
               <li>Książka przychodów i rozchodów</li>
@@ -80,7 +83,6 @@ const RectangleTextContainer = styled.div`
 
 const TextContainer = styled.div`
   font-weight: 900;
-  padding: 30px 50px;
   font-size: clamp(1rem, 1.7vw, 3rem);
   margin-left: 4vw;
   margin-top: 5vh;
@@ -91,8 +93,10 @@ const TextContainer = styled.div`
   box-shadow: -10px 0px 8px rgba(0, 0, 0, 0.1);
   background: white;
   z-index: 10;
+  padding: 30px;
+  /* padding: 30px; */
   @media screen and (max-width: 870px) {
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
   }
   @media screen and (max-width: 700px) {
     width: 90vw;
@@ -100,7 +104,7 @@ const TextContainer = styled.div`
     height: 80%;
     margin-left: 0;
     font-size: 1.3rem;
-    padding: 30px;
+    /* padding: 30px; */
     margin-top: 5vh;
   }
 `;

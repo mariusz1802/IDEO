@@ -24,11 +24,11 @@ const IndexPage = () => {
         <Hero />
         <OFirmieSection />
         <OfertaSection />
-       {/*  <CennikSection />
+        <CennikSection />
         <StrefaKlienta />
-        <KalkulatoryWyszSection />
-        <KontaktSection />
-        <Footer /> */}
+      <KalkulatoryWyszSection />
+     <KontaktSection />
+            <Footer />
       </ThemeProvider>
     );
   }
