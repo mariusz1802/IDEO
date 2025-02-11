@@ -21,10 +21,10 @@ function CennikSecition() {
       </SectionTitleWrapper>
       <ColumnContainer>
         <Column
-        // data-sal="slide-right"
-        // data-sal-easing="ease-out-back"
-        // data-sal-delay="300"
-        // data-sal-duration="1200"
+        data-sal="slide-right"
+        data-sal-easing="ease-out-back"
+        data-sal-delay="300"
+        data-sal-duration="1200"
         >
           <TitleColumn>Orientacyjne ceny: </TitleColumn>
           <ButtonImage
@@ -36,10 +36,10 @@ function CennikSecition() {
         </Column>
 
         <Column
-        // data-sal="slide-left"
-        // data-sal-easing="ease-out-back"
-        // data-sal-delay="300"
-        // data-sal-duration="1200"
+        data-sal="slide-left"
+        data-sal-easing="ease-out-back"
+        data-sal-delay="300"
+        data-sal-duration="1200"
         >
           <TitleColumn> Zapytaj o ofertę: </TitleColumn>
           <ButtonImage href="tel:+48790578923">

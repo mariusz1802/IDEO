@@ -7,10 +7,10 @@ function TextContent({ textContent, color }) {
   return (
     <TextContainer
       color={validWhite}
-      // data-sal="fade"
-      // data-sal-easing="ease-out-back"
-      // data-sal-delay="300"
-      // data-sal-duration="1200"
+      data-sal="fade"
+      data-sal-easing="ease-out-back"
+      data-sal-delay="300"
+      data-sal-duration="1200"
     >
       {textContent}
     </TextContainer>

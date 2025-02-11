@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 const RoundButton = styled.button`
   font-family: "Raleway", sans-serif;
@@ -55,14 +56,16 @@ const RoundButton = styled.button`
 
 const ButtonHero = () => {
   return (
-    <RoundButton
-      data-sal="zoom-in"
-      data-sal-easing="ease-out-back"
-      data-sal-delay="300"
-      data-sal-duration="800"
-    >
-      Sprawdź
-    </RoundButton>
+    <AnchorLink to="#oferta">
+      <RoundButton
+        data-sal="zoom-in"
+        data-sal-easing="ease-out-back"
+        data-sal-delay="300"
+        data-sal-duration="800"
+      >
+        Sprawdź
+      </RoundButton>
+    </AnchorLink>
   );
 };
 

@@ -38,7 +38,7 @@ function Hero() {
             quality={100}
             objectFit="cover"
             style={{
-            position: "absolute",
+              position: "absolute",
               top: 0,
               left: 0,
               zIndex: -1,

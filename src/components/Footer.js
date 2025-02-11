@@ -20,6 +20,9 @@ function Footer() {
       <BlueContainer>
         <MainSection>
           <Column>
+            <LogoWrapper>
+              <StaticImage src="../assets/Logo.svg" alt="IDEO_Logo" />
+            </LogoWrapper>
             <TitleColumn>Kontakt:</TitleColumn>
             <P_Styled>
               Potrzebujesz więcej informacji? Chętnie odpowiemy na każde
@@ -75,6 +78,23 @@ function Footer() {
   );
 }
 
+const LogoWrapper = styled.div`
+display: none;
+@media screen and (max-width: 800px){
+  margin-bottom: 20px;
+  width: 60%;
+  display: flex;
+  color: white;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+
+}
+  
+
+`;
+
 const A = styled.a`
   &:hover {
     text-decoration: underline;
@@ -95,19 +115,20 @@ const CardContainer = styled.div`
   z-index: 1000; /* Zapewnij, że będzie nad innymi elementami */
   background-color: white; /* Dodaj tło, aby wyróżnić treść */
   width: 32%;
-  @media screen and (max-width: 1000px){
-  padding: 10px 20px;
-  width: 40%;
-  bottom: 100px;
-}
+  @media screen and (max-width: 1000px) {
+    padding: 10px 10px;
+    width: 30%;
+    bottom: 100px;
+  }
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
 `;
 
 const TextContainer = styled.p`
   color: ${({ theme }) => theme.colors.brightBlue};
   font-size: clamp(1rem, 1.3vw, 2.5rem);
-
 `;
-
 
 export default Footer;
 
@@ -123,6 +144,11 @@ const BottomLine = styled.div`
   justify-content: flex-end;
   width: 100%;
   color: white;
+  @media screen and (max-width: 800px) {
+    justify-content: center;
+    font-size: 0.7rem;
+    margin-top: 20px;
+  }
 `;
 
 const LiStyled = styled.li`
@@ -139,12 +165,19 @@ const TitleColumn = styled.p`
   color: white;
   margin-bottom: 20px;
   font-size: clamp(1rem, 1.4vw, 2.2rem);
+  @media screen and (max-width: 800px) {
+    font-size: 1.5rem;
+    text-align: center;
+  }
 `;
 const P_Styled = styled.div`
   margin-left: 10px;
   font-size: clamp(1rem, 1.2vw, 2rem);
   font-weight: 300;
   color: white;
+  @media screen and (max-width: 800px) {
+    margin: 5px 0;
+  }
 `;
 
 const Row = styled.div`
@@ -168,6 +201,12 @@ const Column = styled.div`
       display: none;
       margin: 0 5px;
     }
+    @media screen and (max-width: 800px) {
+      border-right: none;
+      margin: 0;
+      padding: 5px 5px 5px 5px;
+      align-items: center;
+    }
   }
 `;
 
@@ -179,6 +218,8 @@ const MainSection = styled.div`
     border-right: none;
   }
 
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
   }
 `;
 
@@ -222,5 +263,10 @@ const BlueContainer = styled.div`
     border-top: 30px solid rgba(4, 54, 148, 0.2);
     transform: translate(-15px, -15px); /* Przesunięcie na zewnątrz */
     z-index: 0;
+  }
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    margin-top: 100px;
+    padding-left: 20px;
   }
 `;

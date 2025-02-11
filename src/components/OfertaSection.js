@@ -19,12 +19,14 @@ function OfertaSection() {
       </SectionTitleWrapper>
       <ContentContainer>
         <div
-          data-sal="slide-right"
-          data-sal-easing="ease-out-back"
-          data-sal-delay="300"
-          data-sal-duration="1200"
+          // data-sal="slide-right"
+          // data-sal-easing="ease-out-back"
+          // data-sal-delay="300"
+          // data-sal-duration="1200"
         >
-          <StaticImage src="../assets/calc.png" alt="Kalkulator" />
+          <StaticImage src="../assets/calc.png" alt="Kalkulator" 
+    
+          />
         </div>
         <RectangleTextContainer 
         // data-sal="slide-left" 

@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
   }
 
   body {
@@ -14,8 +15,15 @@ const GlobalStyles = createGlobalStyle`
     background-color: #f9f9f9;
     background-color: white;
     color: #333;
-  overflow-x: hidden;
+    overflow-x: hidden;
+    width: 100vw;
 
+
+  }
+
+  html{
+    width: 100vw;
+    overflow-x: hidden;
   }
 
   a {

@@ -43,8 +43,9 @@ function BurgerMenu() {
               </LinkContainer>
             </Router>
             <SocialContainer>
+              <a href="https://www.facebook.com/ideoksiegowosc" target="_blank">
               <BsFacebook size="2.7rem" />
-              <RiInstagramFill size="3rem" />
+              </a>
             </SocialContainer>
           </ScrollContainer>
         </MobileContainer>
@@ -139,8 +140,8 @@ const BurgerWrapper = styled.div`
   display: none;
   @media screen and (max-width: 1390px) {
     display: block;
-    top: 30px;
-    right: 30px;
+    top: 10px;
+    right: 10px;
     z-index: 300;
     position: fixed;
     color: #fff;

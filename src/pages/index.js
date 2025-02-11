@@ -26,9 +26,9 @@ const IndexPage = () => {
         <OfertaSection />
         <CennikSection />
         <StrefaKlienta />
-      <KalkulatoryWyszSection />
-     <KontaktSection />
-            <Footer />
+        <KalkulatoryWyszSection />
+        <KontaktSection />
+        <Footer />
       </ThemeProvider>
     );
   }
