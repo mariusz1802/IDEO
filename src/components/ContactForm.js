@@ -63,7 +63,7 @@ const SubmitButton = styled.button`
 const ErrorMessage = styled.p`
   color: red;
   font-size: 14px;
-  margin: -10px 0 10px 0;
+  margin: 5px 0 10px 0;
 `;
 
 // Komponent formularza
@@ -82,6 +82,10 @@ const ContactForm = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const [show, setShow] = useState(true);
+
+  const handleClose = () => setShow(false);
+
   const validateForm = () => {
     const newErrors = {};
 
@@ -91,6 +95,8 @@ const ContactForm = () => {
     if (!formData.phone || !/^\d{9}$/.test(formData.phone))
       newErrors.phone = "Podaj poprawny numer telefonu (9 cyfr).";
     if (!formData.message) newErrors.message = "Wiadomość jest wymagana.";
+    if (formData.message.length < 10)
+      newErrors.message = "Wiadomość jest za krotka.";
 
     return newErrors;
   };
@@ -105,7 +111,7 @@ const ContactForm = () => {
     }
 
     // Wysłanie danych do Getform.io
-    fetch("https://getform.io/f/YOUR_GETFORM_ENDPOINT", {
+    fetch("https://getform.io/f/bzywyjea", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
